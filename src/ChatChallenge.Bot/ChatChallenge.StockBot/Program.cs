@@ -31,10 +31,10 @@ namespace ChatChallenge.StockBot
                         //Configuration to user RabbitMQ
                         x.UsingRabbitMq((context, cfg) =>
                         {
-                            cfg.Host("localhost", "/", x =>
+                            cfg.Host("rabbit", "/", x =>
                             {
-                                x.Username("guest");
-                                x.Password("guest");
+                                x.Username("admin");
+                                x.Password("admin");
                             });
 
                             cfg.ConfigureEndpoints(context);
