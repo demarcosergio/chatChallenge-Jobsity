@@ -1,4 +1,4 @@
-#Chat challenge with bot and groups
+# Chat challenge with bot and groups
 
 ### **To move forward with the challenge I did:**
 
