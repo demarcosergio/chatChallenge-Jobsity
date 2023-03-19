@@ -1,0 +1,49 @@
+﻿@page
+@using ChatChallenge.WebApp.Pages;
+@using Microsoft.AspNetCore.Identity
+@model ChatGroupRoomModel
+@{
+
+}
+
+<div class="container">
+        <div class="row">
+        <div class="col-10">
+    <div class="row">
+    <h1>Room <span id="roomId">@Model.RoomId</span></h1>    
+    </div>
+    <div class="row">
+        <div class="col-1">User</div>
+        <div class="col-5">
+            <b><span id="userName" class="w-100">@Model.UserName</span></b>
+        </div>
+    </div>
+    <div class="row" style="margin-top:1rem">
+        <div class="col-1">Message</div>
+        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+    </div>
+    <div class="row" style="margin-top:2rem">
+        <div class="col text-start">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul id="messagesList"></ul>
+        </div>
+
+    </div>
+</div>
+    <div class="col-2" style="border-left: 1px solid lightgray;">
+        <p>Users connected:</p> 
+        <ul id="usersInGroupList"></ul>
+    </div>
+            </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chatGroup.js"></script>

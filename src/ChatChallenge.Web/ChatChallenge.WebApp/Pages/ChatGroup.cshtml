@@ -1,0 +1,88 @@
+﻿@page
+@using ChatChallenge.WebApp.Pages;
+@using Microsoft.AspNetCore.Identity
+@model ChatGroupModel
+@{
+
+}
+<div class="container">
+	<div class="row">
+		<div class="card" style="width: 18rem;">
+		  <img src="~/images/room1Logo.png" class="card-img-top" alt="dd">
+		  <div class="card-body">
+			<h5 class="card-title">Room #1</h5>
+			<p class="card-text">Connected users:</p>
+			<p>
+					@if (!string.IsNullOrEmpty(Model.UsersInGroup1))
+					{
+
+						<b>@Model.UsersInGroup1</b>
+					}
+					else
+					{
+							<p>Empty room</p>
+					}
+				</p>
+			<a class="btn btn-primary" asp-area="" asp-page="/ChatGroupRoom" asp-route-roomID="1">Chat room</a>
+		  </div>
+		</div>
+		<div class="card" style="width: 18rem;">
+		  <img src="~/images/room2Logo.png"  class="card-img-top" alt="dd">
+		  <div class="card-body">
+			<h5 class="card-title">Room #2</h5>
+			<p class="card-text">Connected users:</p>
+			<p>
+					@if (!string.IsNullOrEmpty(Model.UsersInGroup2))
+					{
+
+								<b>@Model.UsersInGroup2</b>
+					}
+					else
+					{
+								<p>Empty room</p>
+					}
+				</p>
+			<a class="btn btn-primary" asp-area="" asp-page="/ChatGroupRoom" asp-route-roomID="2">Chat room</a>
+		  </div>
+		</div>
+		<div class="card" style="width: 18rem;">
+		  <img src="~/images/room3Logo.png"  class="card-img-top" alt="dd">
+		  <div class="card-body">
+			<h5 class="card-title">Room #3</h5>
+			<p class="card-text">Connected users:</p>
+			<p>
+					@if (!string.IsNullOrEmpty(Model.UsersInGroup3))
+					{
+
+								<b>@Model.UsersInGroup3</b>
+					}
+					else
+					{
+								<p>Empty room</p>
+					}
+				</p>
+			<a class="btn btn-primary" asp-area="" asp-page="/ChatGroupRoom" asp-route-roomID="3">Chat room</a>
+		  </div>
+		</div>
+		<div class="card" style="width: 18rem;">
+		  <img src="~/images/room4Logo.png"  class="card-img-top" alt="dd">
+		  <div class="card-body">
+			<h5 class="card-title">Room #4</h5>
+			<p class="card-text">Connected users:</p>
+			<p>
+					@if (!string.IsNullOrEmpty(Model.UsersInGroup4))
+					{
+
+								<b>@Model.UsersInGroup4</b>
+					}
+					else
+					{
+								<p>Empty room</p>
+					}
+				</p>
+			<a class="btn btn-primary" asp-area="" asp-page="/ChatGroupRoom" asp-route-roomID="4">Chat room</a>
+		  </div>
+		</div>
+	</div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
